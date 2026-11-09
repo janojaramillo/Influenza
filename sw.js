@@ -2,8 +2,8 @@
    - Guarda la app completa al instalarse: funciona sin internet.
    - La página intenta la red solo 3 s; si tarda más, abre la copia guardada (no se queda girando).
    - Las tipografías se guardan al vuelo y nunca bloquean la carga. */
-const VERSION = 'influenza-perinatal-v1.1-2026-11-09';
-const CORE = ['./', './index.html', './manifest.json', './apple-touch-icon.png', './icon-192.png', './icon-512.png'];
+const VERSION = 'influenza-perinatal-v1.2-2026-11-09';
+const CORE = ['./', './index.html', './manifest.json', './influenza-icon-180-v2.png', './influenza-icon-192-v2.png', './influenza-icon-512-v2.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));

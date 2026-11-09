@@ -10,9 +10,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Influenza Perinatal">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" href="icon-192.png">
-<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" sizes="180x180" href="influenza-icon-180-v2.png">
+<link rel="icon" type="image/png" href="influenza-icon-192-v2.png">
+<link rel="manifest" href="manifest.json?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -181,14 +181,14 @@ table.t th{font-size:11px;font-family:var(--mono);letter-spacing:.06em;text-tran
   </div>
   <div class="cv-foot">
     <b>Dr. Jano Jaramillo</b> — Médico Pediatra y Neonatólogo · Posgrado en Trastornos del Aprendizaje<br>
-    Sala de Neonatología · v1.1 · noviembre 2026
+    Sala de Neonatología · v1.2 · noviembre 2026
     <div class="cv-net"><span class="dot" id="cvdot"></span><span id="cvnet">en línea</span></div>
   </div>
 </div>
 
 <!-- ================= APP ================= -->
 <header class="app">
-  <img src="icon-192.png" alt="">
+  <img src="influenza-icon-192-v2.png" alt="">
   <div class="t"><b>Influenza perinatal</b><small id="hdnet">CDSS · madre &amp; recién nacido</small></div>
   <button id="toCover" aria-label="Ver carátula">Carátula</button>
 </header>
@@ -642,7 +642,7 @@ const SRC=[
 $('#srcList').innerHTML+=SRC.map(s=>`<div class="src"><b>${s[0]}</b><small>${s[1]}</small>${s[2]?`<br><a href="${s[2]}" target="_blank" rel="noopener">abrir</a>`:''}</div>`).join('')+'<p class="hint" style="margin-top:10px">Nota de contexto: en 2026 la AAP emite recomendaciones independientes del calendario federal de EE. UU.; para Panamá rigen las normas del MINSA y el PAI.</p>';
 
 /* ---------- PWA: service worker ---------- */
-if('serviceWorker' in navigator&&location.protocol.startsWith('http')){addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').then(()=>navigator.serviceWorker.ready).then(()=>setTimeout(net,600)).catch(()=>{})})}
+if('serviceWorker' in navigator&&location.protocol.startsWith('http')){addEventListener('load',()=>{navigator.serviceWorker.register("sw.js?v=1.2").then(()=>navigator.serviceWorker.ready).then(()=>setTimeout(net,600)).catch(()=>{})})}
 
 /* ---------- inicio ---------- */
 resetForm();renderPrev();renderCases();doseCalc();net();
