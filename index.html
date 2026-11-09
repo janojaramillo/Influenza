@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Influenza Perinatal</title>
+<meta name="description" content="CDSS de influenza materna y neonatal en el periodo perinatal: madre febril, recién nacido expuesto o enfermo, dosis de oseltamivir y control de la diseminación.">
+<meta name="theme-color" content="#1d1638">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Influenza Perinatal">
+<link rel="apple-touch-icon" href="data:image/jpeg;base64,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">
+<link rel="icon" href="data:image/jpeg;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#1d1638; --night2:#0d0b1e; --plum:#3a2457;
+  --cream:#faf3e8; --paper:#fffaf2; --ink:#2b2233; --muted:#776a72; --line:#eadbc8;
+  --terra:#b8553a; --terra2:#d9734f; --peach:#f4b48a; --rose:#d9798a; --coral:#e9897e;
+  --red:#b3261e; --redbg:#fbe7e4; --amber:#9a5b00; --amberbg:#fdf0d8; --green:#2f6b45; --greenbg:#e5f2e8; --blue:#2c4f7c; --bluebg:#e6edf7;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif; --sans:'Inter',-apple-system,'Segoe UI',Roboto,sans-serif; --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);font-size:15.5px;line-height:1.5;-webkit-text-size-adjust:100%}
+button,input,select{font:inherit;color:inherit}
+a{color:var(--terra)}
+
+/* ---------- CARÁTULA ---------- */
+#cover{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+  padding:calc(env(safe-area-inset-top) + 28px) 22px calc(env(safe-area-inset-bottom) + 22px);
+  background:radial-gradient(120% 80% at 50% 35%,#3a2457 0%,#1d1638 50%,#0d0b1e 100%);color:#f7ead8;overflow:hidden;transition:opacity .5s,transform .5s}
+#cover.hide{opacity:0;transform:scale(1.04);pointer-events:none}
+.stars i{position:absolute;width:2px;height:2px;border-radius:50%;background:#f7ead8;opacity:.5;animation:tw 4s infinite ease-in-out}
+@keyframes tw{50%{opacity:.08}}
+.cv-top{text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--peach);opacity:.9}
+.cv-art{width:min(78vw,340px);aspect-ratio:1;position:relative}
+.cv-art svg{width:100%;height:100%;overflow:visible}
+.orbit{transform-origin:200px 205px;animation:spin 60s linear infinite}
+.orbit2{transform-origin:200px 205px;animation:spin 90s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.breath{transform-origin:224px 206px;animation:br 3.6s ease-in-out infinite}
+@keyframes br{50%{transform:scale(1.07)}}
+.cv-title{text-align:center}
+.cv-title h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,11vw,54px);line-height:.95;margin:0;letter-spacing:-.01em}
+.cv-title h1 em{font-style:italic;color:var(--peach);display:block}
+.cv-title p{margin:12px auto 0;max-width:330px;font-size:14px;color:#d9c9bd;line-height:1.45}
+.cv-chips{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.cv-chips span{font-family:var(--mono);font-size:10.5px;border:1px solid rgba(244,180,138,.45);color:var(--peach);padding:4px 9px;border-radius:99px}
+.cv-btn{margin-top:18px;background:linear-gradient(135deg,var(--peach),var(--rose));color:#2a1730;border:0;border-radius:99px;padding:14px 38px;font-weight:700;font-size:16px;letter-spacing:.02em;box-shadow:0 10px 30px rgba(233,137,126,.35);cursor:pointer}
+.cv-foot{text-align:center;font-size:11.5px;color:#b9a8b4;line-height:1.45}
+.cv-foot b{color:#f7ead8;font-weight:600}
+.cv-net{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-family:var(--mono);font-size:10.5px;color:#cbb9c3}
+.dot{width:7px;height:7px;border-radius:50%;background:#7bc597;display:inline-block}
+.dot.off{background:#e0a34a}
+
+/* ---------- APP ---------- */
+header.app{position:sticky;top:0;z-index:20;background:var(--night);color:#f7ead8;padding:calc(env(safe-area-inset-top) + 10px) 16px 10px;display:flex;align-items:center;gap:10px}
+header.app img{width:32px;height:32px;border-radius:9px}
+header.app .t{flex:1;min-width:0}
+header.app .t b{font-family:var(--serif);font-weight:600;font-size:18px;display:block;line-height:1.1}
+header.app .t small{font-family:var(--mono);font-size:10px;color:var(--peach);letter-spacing:.08em}
+header.app button{background:none;border:1px solid rgba(247,234,216,.3);color:#f7ead8;border-radius:8px;padding:5px 9px;font-size:12px}
+main{max-width:760px;margin:0 auto;padding:14px 14px calc(env(safe-area-inset-bottom) + 92px)}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(255,250,242,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line);display:flex;padding:6px 4px calc(env(safe-area-inset-bottom) + 6px)}
+nav.tabs button{flex:1;background:none;border:0;padding:6px 2px;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10.5px;color:var(--muted);cursor:pointer}
+nav.tabs button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+nav.tabs button.on{color:var(--terra);font-weight:600}
+section.view{display:none}
+section.view.on{display:block;animation:fade .25s}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}}
+h2{font-family:var(--serif);font-weight:600;font-size:24px;margin:6px 0 4px;letter-spacing:-.01em}
+h3{font-family:var(--serif);font-weight:600;font-size:18px;margin:0 0 6px}
+.lead{color:var(--muted);font-size:14px;margin:0 0 14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px;margin:0 0 12px}
+.card.dark{background:var(--night);color:#f7ead8;border-color:var(--night)}
+.k{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:8px;display:block}
+label.f{display:block;font-size:13px;font-weight:600;margin:10px 0 5px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+input[type=number],input[type=date],select{width:100%;padding:10px 11px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:16px;-webkit-appearance:none;appearance:none}
+input:focus,select:focus{outline:2px solid var(--peach);border-color:var(--terra2)}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{border:1px solid var(--line);background:#fff;border-radius:99px;padding:7px 12px;font-size:13.5px;cursor:pointer}
+.seg button.on{background:var(--terra);border-color:var(--terra);color:#fff}
+.chk{display:flex;flex-wrap:wrap;gap:6px}
+.chk button{border:1px dashed #d8c3ad;background:#fff;border-radius:10px;padding:7px 10px;font-size:13px;cursor:pointer;text-align:left}
+.chk button.on{border-style:solid;border-color:var(--red);background:var(--redbg);color:var(--red);font-weight:600}
+.hint{font-size:12px;color:var(--muted);margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--terra);color:#fff;border:0;border-radius:12px;padding:12px 16px;font-weight:600;cursor:pointer;width:100%;font-size:15px}
+.btn.ghost{background:#fff;color:var(--terra);border:1px solid var(--terra)}
+.btn.sm{width:auto;padding:8px 12px;font-size:13px;border-radius:10px}
+.out{margin-top:6px}
+.rec{border-radius:14px;padding:12px 13px;margin:0 0 10px;border:1px solid;background:#fff}
+.rec h4{margin:0 0 6px;font-size:15px;display:flex;align-items:center;gap:8px}
+.rec ul{margin:4px 0 0;padding-left:18px}
+.rec li{margin:3px 0}
+.rec p{margin:4px 0}
+.rec.red{background:var(--redbg);border-color:#efb7ae}.rec.red h4{color:var(--red)}
+.rec.amber{background:var(--amberbg);border-color:#ecd09b}.rec.amber h4{color:var(--amber)}
+.rec.green{background:var(--greenbg);border-color:#b9d9c2}.rec.green h4{color:var(--green)}
+.rec.blue{background:var(--bluebg);border-color:#bfd0e8}.rec.blue h4{color:var(--blue)}
+.tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:99px;background:rgba(0,0,0,.07)}
+.big{font-family:var(--mono);font-size:28px;font-weight:600;color:var(--terra);line-height:1.1}
+.mono{font-family:var(--mono)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14px}
+.kv dt{color:var(--muted)}.kv dd{margin:0;font-weight:600}
+.pill{display:inline-block;font-size:12px;padding:3px 9px;border-radius:99px;background:#f1e3d2;margin:2px 3px 2px 0}
+.pov{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.pov div{background:rgba(255,255,255,.65);border:1px solid rgba(0,0,0,.08);border-radius:10px;padding:8px;font-size:13px}
+.pov b{display:block;font-size:11px;font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px}
+details.acc{background:var(--paper);border:1px solid var(--line);border-radius:14px;margin:0 0 10px;overflow:hidden}
+details.acc summary{list-style:none;cursor:pointer;padding:13px 14px;font-weight:600;display:flex;align-items:center;gap:10px}
+details.acc summary::-webkit-details-marker{display:none}
+details.acc summary .n{width:26px;height:26px;border-radius:50%;background:var(--night);color:var(--peach);font-family:var(--mono);font-size:12px;display:grid;place-items:center;flex:none}
+details.acc summary::after{content:'+';margin-left:auto;font-size:20px;color:var(--terra);font-weight:400}
+details.acc[open] summary::after{content:'–'}
+details.acc .body{padding:0 14px 12px}
+.ck{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-top:1px solid #f1e6d8;font-size:14px;cursor:pointer}
+.ck input{margin-top:3px;width:18px;height:18px;accent-color:var(--terra);flex:none}
+.ck.done span{color:var(--muted);text-decoration:line-through}
+.ev{font-size:10px;font-family:var(--mono);padding:1px 6px;border-radius:6px;margin-left:4px;white-space:nowrap}
+.ev.A{background:#dceee1;color:var(--green)}.ev.B{background:#e3eaf5;color:var(--blue)}.ev.C{background:#f6e7cf;color:var(--amber)}
+table.t{width:100%;border-collapse:collapse;font-size:13.5px}
+table.t th,table.t td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+table.t th{font-size:11px;font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.case{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:12px}
+.case .hd{display:flex;gap:10px;align-items:center;margin-bottom:6px}
+.case .hd .n{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--peach),var(--rose));color:#2a1730;font-family:var(--serif);font-weight:600;display:grid;place-items:center;flex:none}
+.case .q{background:#fff;border-left:3px solid var(--terra);padding:8px 10px;border-radius:0 10px 10px 0;margin:8px 0;font-size:14px}
+.case .ans{display:none;margin-top:8px;font-size:14px}
+.case.open .ans{display:block}
+.src{font-size:13.5px;padding:9px 0;border-top:1px solid var(--line)}
+.src b{display:block}
+.src small{color:var(--muted)}
+.foot{font-size:11.5px;color:var(--muted);text-align:center;margin:18px 0 6px;line-height:1.5}
+.netbar{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10.5px;color:var(--muted);justify-content:center;margin:6px 0}
+@media(max-width:380px){.row3{grid-template-columns:1fr 1fr}.pov{grid-template-columns:1fr}}
+@media print{nav.tabs,header.app button,#cover{display:none!important}section.view{display:block!important}}
+</style>
+</head>
+<body>
+
+<!-- ================= CARÁTULA ================= -->
+<div id="cover" role="dialog" aria-label="Carátula">
+  <div class="stars" id="stars"></div>
+  <div class="cv-top">CDSS · Neonatología · Hospital Dr. Cecilio Castillero</div>
+  <div class="cv-art">
+    <svg viewBox="0 0 400 400" aria-hidden="true">
+      <defs>
+        <radialGradient id="g1" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f6c39b" stop-opacity=".6"/><stop offset="1" stop-color="#f6c39b" stop-opacity="0"/></radialGradient>
+        <linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4b48a"/><stop offset="1" stop-color="#d9798a"/></linearGradient>
+        <mask id="cm"><rect width="400" height="400" fill="#000"/><circle cx="198" cy="222" r="80" fill="#fff"/><circle cx="226" cy="204" r="70" fill="#000"/></mask>
+        <g id="vir"><circle r="13" fill="none" stroke="#e9897e" stroke-width="3"/><g stroke="#e9897e" stroke-width="2.4" stroke-linecap="round"><line y1="-13" y2="-21"/><line y1="13" y2="21"/><line x1="-13" x2="-21"/><line x1="13" x2="21"/><line x1="9.2" y1="9.2" x2="14.8" y2="14.8"/><line x1="-9.2" y1="-9.2" x2="-14.8" y2="-14.8"/><line x1="9.2" y1="-9.2" x2="14.8" y2="-14.8"/><line x1="-9.2" y1="9.2" x2="-14.8" y2="14.8"/></g><g fill="#e9897e"><circle cy="-23" r="3"/><circle cy="23" r="3"/><circle cx="-23" r="3"/><circle cx="23" r="3"/><circle cx="16.3" cy="16.3" r="3"/><circle cx="-16.3" cy="-16.3" r="3"/><circle cx="16.3" cy="-16.3" r="3"/><circle cx="-16.3" cy="16.3" r="3"/></g></g>
+      </defs>
+      <circle cx="200" cy="205" r="160" fill="url(#g1)" opacity=".35"/>
+      <g class="orbit"><circle cx="200" cy="205" r="128" fill="none" stroke="url(#rg)" stroke-width="5" stroke-dasharray="2 12" stroke-linecap="round"/></g>
+      <circle cx="200" cy="205" r="141" fill="none" stroke="url(#rg)" stroke-width="1.2" opacity=".45"/>
+      <rect width="400" height="400" fill="#f7ead8" mask="url(#cm)"/>
+      <circle cx="160" cy="130" r="25" fill="#f7ead8"/>
+      <g class="breath"><circle cx="224" cy="206" r="42" fill="url(#g1)"/><circle cx="224" cy="206" r="24" fill="#f4b48a"/></g>
+      <g class="orbit2">
+        <use href="#vir" transform="translate(30 92) scale(.95)" opacity=".85"/>
+        <use href="#vir" transform="translate(372 120) scale(.7)" opacity=".6"/>
+        <use href="#vir" transform="translate(360 330) scale(.9)" opacity=".75"/>
+        <use href="#vir" transform="translate(40 340) scale(.6)" opacity=".5"/>
+        <use href="#vir" transform="translate(205 20) scale(.55)" opacity=".45"/>
+      </g>
+    </svg>
+  </div>
+  <div class="cv-title">
+    <h1>Influenza<em>perinatal</em></h1>
+    <p>La madre febril, el recién nacido expuesto o enfermo, y el círculo que hay que cerrar para que el virus no entre.</p>
+    <div class="cv-chips"><span>CDC sep-2026</span><span>AAP 2026-27</span><span>ACOG</span><span>Life 2026</span></div>
+    <button class="cv-btn" id="enter">Entrar</button>
+  </div>
+  <div class="cv-foot">
+    <b>Dr. Jano Jaramillo</b> — Médico Pediatra y Neonatólogo · Posgrado en Trastornos del Aprendizaje<br>
+    Sala de Neonatología · v1.0 · noviembre 2026
+    <div class="cv-net"><span class="dot" id="cvdot"></span><span id="cvnet">en línea</span></div>
+  </div>
+</div>
+
+<!-- ================= APP ================= -->
+<header class="app">
+  <img src="data:image/jpeg;base64,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" alt="">
+  <div class="t"><b>Influenza perinatal</b><small id="hdnet">CDSS · madre &amp; recién nacido</small></div>
+  <button id="toCover" aria-label="Ver carátula">Carátula</button>
+</header>
+
+<main>
+
+<!-- ======== EVALUAR ======== -->
+<section class="view on" id="v-eval">
+  <h2>Evaluar el binomio</h2>
+  <p class="lead">Llene lo que sepa. El motor separa lo que es acción inmediata, lo que es decisión compartida con la madre y lo que es vigilancia.</p>
+
+  <div class="card">
+    <span class="k">1 · Madre</span>
+    <label class="f">Influenza materna</label>
+    <div class="seg" data-k="mStatus">
+      <button data-v="sosp">Sospecha</button><button data-v="conf">Confirmada (NAAT/PCR)</button><button data-v="neg">Descartada (PCR −)</button><button data-v="no">Sin síntomas</button>
+    </div>
+    <label class="f">¿Cuándo empezó en relación con el parto?</label>
+    <div class="seg" data-k="mTiming">
+      <button data-v="pre">Antes del parto</button><button data-v="intra">Fiebre intraparto</button><button data-v="post">Puerperio ≤ 2 sem</button>
+    </div>
+    <div class="row">
+      <div><label class="f">Inicio de síntomas</label><input type="date" id="mOnset"></div>
+      <div><label class="f">Fecha del parto</label><input type="date" id="dBirth"></div>
+    </div>
+    <label class="f">Gravedad materna</label>
+    <div class="seg" data-k="mSev">
+      <button data-v="leve">Leve</button><button data-v="mod">Hospitalizada / neumonía</button><button data-v="grave">Grave · UCI · ventilación</button>
+    </div>
+    <label class="f">Situación respiratoria y fiebre</label>
+    <div class="chk" data-multi="mFlags">
+      <button data-v="febril">Fiebre ≥ 38 °C ahora o en las últimas 24 h</button>
+      <button data-v="nocontrol">No puede usar mascarilla / controlar tos y secreciones</button>
+      <button data-v="triplei">Signos de Triple I / corioamnionitis</button>
+      <button data-v="dengue">Epidemiología de dengue / exantema / plaquetas bajas</button>
+      <button data-v="osel">Ya recibe oseltamivir</button>
+    </div>
+    <label class="f">Vacuna de influenza esta temporada</label>
+    <div class="seg" data-k="mVax">
+      <button data-v="si">Sí, ≥ 2 sem antes del parto</button><button data-v="reciente">Sí, &lt; 2 sem</button><button data-v="no">No</button><button data-v="nd">Desconocido</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="k">2 · Recién nacido</span>
+    <div class="row3">
+      <div><label class="f">EG al nacer (sem)</label><input type="number" id="gaW" min="22" max="43" inputmode="numeric" placeholder="39"></div>
+      <div><label class="f">+ días</label><input type="number" id="gaD" min="0" max="6" inputmode="numeric" placeholder="0"></div>
+      <div><label class="f">Días de vida</label><input type="number" id="pn" min="0" max="120" inputmode="numeric" placeholder="1"></div>
+    </div>
+    <label class="f">Peso actual (g)</label><input type="number" id="wt" min="300" max="6000" inputmode="numeric" placeholder="3200">
+    <label class="f">Ubicación</label>
+    <div class="seg" data-k="nLoc">
+      <button data-v="aloj">Alojamiento conjunto</button><button data-v="cunero">Cunero / sala</button><button data-v="ucin">UCIN</button>
+    </div>
+    <label class="f">Signos en el RN <span class="hint">(cualquiera = sintomático)</span></label>
+    <div class="chk" data-multi="nSx">
+      <button data-v="fiebre">Fiebre o hipotermia</button><button data-v="apnea">Apnea / bradicardia</button><button data-v="resp">Taquipnea / quejido / tiraje</button>
+      <button data-v="o2">Requiere O₂ o desatura</button><button data-v="ali">Rechazo alimentario</button><button data-v="let">Letargia / irritabilidad</button>
+      <button data-v="rin">Rinorrea / congestión / tos</button><button data-v="gi">Vómitos / diarrea</button><button data-v="perf">Mala perfusión / cianosis</button>
+    </div>
+    <label class="f">Prueba de influenza en el RN</label>
+    <div class="seg" data-k="nTest">
+      <button data-v="nd">No realizada</button><button data-v="pos">Positiva</button><button data-v="neg">Negativa</button>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:8px;margin-bottom:12px">
+    <button class="btn" id="run">Generar recomendaciones</button>
+    <button class="btn ghost sm" id="reset">Limpiar</button>
+  </div>
+  <div class="out" id="out"></div>
+</section>
+
+<!-- ======== DOSIS ======== -->
+<section class="view" id="v-dose">
+  <h2>Oseltamivir</h2>
+  <p class="lead">Recién nacido según edad posmenstrual (si fue prematuro) y madre gestante o puérpera. Suspensión oral estándar: <b>6 mg/mL</b>.</p>
+  <div class="card">
+    <span class="k">Recién nacido · tratamiento</span>
+    <div class="row3">
+      <div><label class="f">EG al nacer</label><input type="number" id="dGaW" min="22" max="43" inputmode="numeric" placeholder="sem"></div>
+      <div><label class="f">+ días</label><input type="number" id="dGaD" min="0" max="6" inputmode="numeric" placeholder="0"></div>
+      <div><label class="f">Días de vida</label><input type="number" id="dPn" min="0" max="365" inputmode="numeric" placeholder="0"></div>
+    </div>
+    <label class="f">Peso actual (g)</label><input type="number" id="dWt" min="300" max="9000" inputmode="numeric" placeholder="g">
+    <div id="doseOut" style="margin-top:12px"></div>
+  </div>
+
+  <div class="card">
+    <span class="k">Tabla de referencia neonatal</span>
+    <table class="t">
+      <tr><th>Grupo</th><th>Tratamiento (5 días)</th></tr>
+      <tr><td>Prematuro, EPM &lt; 38 sem</td><td class="mono">1 mg/kg/dosis c/12 h</td></tr>
+      <tr><td>Prematuro, EPM 38–40 sem</td><td class="mono">1,5 mg/kg/dosis c/12 h</td></tr>
+      <tr><td>Prematuro, EPM &gt; 40 sem</td><td class="mono">3 mg/kg/dosis c/12 h</td></tr>
+      <tr><td>Nacido a término, 0–8 meses</td><td class="mono">3 mg/kg/dosis c/12 h</td></tr>
+    </table>
+    <p class="hint">EPM = edad posmenstrual (EG al nacer + edad cronológica). Vía oral o por sonda. Uso en &lt; 14 días fuera de la ficha técnica de la FDA, pero recomendado por CDC y AAP. En &lt; 28 sem de EG al nacer los datos son escasos: conviene discutir con Infectología pediátrica.</p>
+    <p class="hint"><b>Profilaxis en &lt; 3 meses:</b> no indicada de rutina (AAP 2026-27); CDC solo la contempla si la situación se juzga crítica.</p>
+  </div>
+
+  <div class="card">
+    <span class="k">Madre (gestante o ≤ 2 sem posparto)</span>
+    <table class="t">
+      <tr><th>Uso</th><th>Dosis</th></tr>
+      <tr><td>Tratamiento</td><td class="mono">75 mg VO c/12 h × 5 d</td></tr>
+      <tr><td>Grave / hospitalizada</td><td>Puede requerir curso &gt; 5 d. CDC menciona 105 mg c/12 h como opción por farmacocinética del embarazo (sin datos de seguridad a esa dosis).</td></tr>
+      <tr><td>Profilaxis posexposición</td><td class="mono">75 mg VO c/24 h × 7 d tras la última exposición</td></tr>
+      <tr><td>Depuración de creatinina 30–60</td><td class="mono">30 mg c/12 h (trat.) · 30 mg c/24 h (profilaxis)</td></tr>
+      <tr><td>Depuración 10–30</td><td class="mono">30 mg c/24 h (trat.) · 30 mg c/48 h (profilaxis)</td></tr>
+    </table>
+    <p class="hint">Baloxavir: CDC no lo recomienda en el embarazo ni en la lactancia (sin datos de seguridad ni de paso a la leche). Oseltamivir es compatible con la lactancia.</p>
+  </div>
+</section>
+
+<!-- ======== PREVENCIÓN ======== -->
+<section class="view" id="v-prev">
+  <h2>Cerrar el círculo</h2>
+  <p class="lead">Medidas para que la influenza no se disemine desde la madre, el personal o las visitas hacia el recién nacido y la unidad. Marque lo cumplido; queda guardado en este teléfono.</p>
+  <div id="prevList"></div>
+  <button class="btn ghost" id="prevReset" style="margin-top:4px">Desmarcar todo</button>
+</section>
+
+<!-- ======== CASOS ======== -->
+<section class="view" id="v-cases">
+  <h2>Casos clínicos</h2>
+  <p class="lead">Para discutir con internos y residentes. Cada caso se puede cargar en el evaluador.</p>
+  <div id="caseList"></div>
+</section>
+
+<!-- ======== EVIDENCIA ======== -->
+<section class="view" id="v-ev">
+  <h2>Evidencia</h2>
+  <p class="lead">Fuentes revisadas el 8 de noviembre de 2026 y dónde no coinciden.</p>
+  <div class="card">
+    <span class="k">Donde las guías no coinciden</span>
+    <div class="rec amber" style="margin:0 0 10px"><h4>Separar o no separar</h4>
+      <p><b>CDC (actualizada 28-sep-2026):</b> sugiere que las instituciones consideren separar temporalmente a la madre enferma de su bebé durante la estancia, decidiéndolo con ella y según sus deseos.</p>
+      <p><b>Kadaj et al., <i>Life</i> 2026 (revisión de alcance):</b> la separación es la intervención con evidencia más débil; para madre estable y RN a término, alojamiento conjunto, piel a piel y lactancia con precauciones de gotas son razonables.</p>
+      <p><b>Cómo lo resuelve esta app:</b> separación ante madre grave, incapaz de usar mascarilla o RN en UCIN; en los demás casos, decisión compartida con la madre y medidas de barrera.</p></div>
+    <div class="rec amber" style="margin:0"><h4>Profilaxis en el RN expuesto</h4>
+      <p>No hay evidencia suficiente de eficacia en &lt; 3 meses; la AAP 2026-27 recalca que no está indicada de forma general. La conducta es vigilar y tratar en cuanto aparezca un signo.</p></div>
+  </div>
+  <div class="card">
+    <span class="k">Datos que conviene tener presentes</span>
+    <ul style="margin:0;padding-left:18px;font-size:14px">
+      <li>La vacuna materna se asoció a una efectividad de 34 % contra influenza con atención médica y 39 % contra hospitalización en menores de 6 meses; 53 % en menores de 3 meses (NVSN).</li>
+      <li>La IgG específica aparece hacia el día 7 de la infección y hacia el día 14 de la vacuna: un parto dentro de los 7 días del inicio, en madre no vacunada, deja al RN con poca protección pasiva.</li>
+      <li>El tratamiento antiviral no acorta el aislamiento: las precauciones de gotas siguen 7 días o hasta 24 h sin fiebre ni síntomas, lo que sea más largo.</li>
+      <li>La transmisión vertical es rara; la mayoría de los RN se contagian después de nacer, de la familia, las visitas o el personal.</li>
+      <li>Panamá 2026: la campaña del MINSA inició en abril priorizando embarazadas y menores de 5 años; la mayoría de los fallecidos por influenza este año no estaban vacunados.</li>
+    </ul>
+  </div>
+  <div class="card" id="srcList"><span class="k">Fuentes</span></div>
+</section>
+
+<p class="foot">Herramienta de apoyo a la decisión clínica. No sustituye el juicio clínico ni las normas del MINSA/CSS.<br>Dr. Jano Jaramillo — Médico Pediatra y Neonatólogo · Posgrado en Trastornos del Aprendizaje</p>
+<div class="netbar"><span class="dot" id="ftdot"></span><span id="ftnet">—</span></div>
+</main>
+
+<nav class="tabs" id="tabs">
+  <button class="on" data-v="v-eval"><svg viewBox="0 0 24 24"><path d="M9 3h6v3H9z"/><path d="M6 5h12v16H6z"/><path d="M9 12l2 2 4-4"/></svg>Evaluar</button>
+  <button data-v="v-dose"><svg viewBox="0 0 24 24"><path d="M10.5 3.5l10 10a4 4 0 01-5.6 5.6l-10-10a4 4 0 015.6-5.6z"/><path d="M8 11l5-5"/></svg>Dosis</button>
+  <button data-v="v-prev"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke-dasharray="2 3"/><circle cx="12" cy="12" r="3"/></svg>Prevención</button>
+  <button data-v="v-cases"><svg viewBox="0 0 24 24"><path d="M4 5h16v12H8l-4 3z"/><path d="M8 9h8M8 13h5"/></svg>Casos</button>
+  <button data-v="v-ev"><svg viewBox="0 0 24 24"><path d="M5 4h10l4 4v12H5z"/><path d="M14 4v5h5"/><path d="M8 13h8M8 17h6"/></svg>Evidencia</button>
+</nav>
+
+<script>
+"use strict";
+/* ---------- utilidades ---------- */
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const fmtDate=d=>d.toLocaleDateString('es-PA',{weekday:'short',day:'numeric',month:'short'});
+const addDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
+const parseDate=v=>{if(!v)return null;const [y,m,dd]=v.split('-').map(Number);return new Date(y,m-1,dd)};
+const num=id=>{const v=parseFloat($(id).value);return isNaN(v)?null:v};
+const r2=x=>Math.round(x*100)/100;
+
+/* ---------- carátula y estrellas ---------- */
+(function(){const s=$('#stars');for(let i=0;i<46;i++){const e=document.createElement('i');e.style.left=Math.random()*100+'%';e.style.top=Math.random()*100+'%';e.style.animationDelay=(Math.random()*4)+'s';if(Math.random()>.8){e.style.width=e.style.height='3px'}s.appendChild(e)}})();
+$('#enter').onclick=()=>{$('#cover').classList.add('hide');store.set('flu_seen',1)};
+$('#toCover').onclick=()=>$('#cover').classList.remove('hide');
+
+/* ---------- red ---------- */
+function net(){const on=navigator.onLine;['#cvdot','#ftdot'].forEach(s=>$(s).classList.toggle('off',!on));
+  const sw=('serviceWorker' in navigator&&navigator.serviceWorker.controller)?' · disponible sin internet':'';
+  $('#cvnet').textContent=on?'en línea'+sw:'sin conexión · funcionando desde el teléfono';$('#ftnet').textContent=$('#cvnet').textContent}
+addEventListener('online',net);addEventListener('offline',net);
+
+/* ---------- pestañas ---------- */
+$$('#tabs button').forEach(b=>b.onclick=()=>{$$('#tabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  $$('section.view').forEach(v=>v.classList.toggle('on',v.id===b.dataset.v));scrollTo({top:0,behavior:'smooth'})});
+function goTab(id){$(`#tabs button[data-v="${id}"]`).click()}
+
+/* ---------- controles ---------- */
+const S={mStatus:null,mTiming:null,mSev:null,mVax:null,nLoc:null,nTest:'nd',mFlags:new Set(),nSx:new Set()};
+$$('.seg').forEach(g=>g.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const k=g.dataset.k;
+  if(S[k]===b.dataset.v){S[k]=null;b.classList.remove('on');return}S[k]=b.dataset.v;g.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b))}));
+$$('.chk').forEach(g=>g.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const set=S[g.dataset.multi];
+  set.has(b.dataset.v)?set.delete(b.dataset.v):set.add(b.dataset.v);b.classList.toggle('on')}));
+function setSeg(k,v){S[k]=v;const g=$(`.seg[data-k="${k}"]`);g.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x.dataset.v===v))}
+function setMulti(k,arr){S[k]=new Set(arr);$(`.chk[data-multi="${k}"]`).querySelectorAll('button').forEach(x=>x.classList.toggle('on',S[k].has(x.dataset.v)))}
+const today=new Date();const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+function resetForm(){['mStatus','mTiming','mSev','mVax','nLoc'].forEach(k=>setSeg(k,null));setSeg('nTest','nd');setMulti('mFlags',[]);setMulti('nSx',[]);
+  ['#gaW','#gaD','#pn','#wt'].forEach(s=>$(s).value='');$('#mOnset').value=iso(today);$('#dBirth').value=iso(today);$('#out').innerHTML=''}
+$('#reset').onclick=resetForm;
+
+/* ---------- motor de dosis ---------- */
+function pmaOf(gaW,gaD,pn){const t=gaW*7+(gaD||0)+(pn||0);return{w:Math.floor(t/7),d:t%7,total:t}}
+function neoDose(gaW,gaD,pn,wtG){
+  if(gaW==null||wtG==null)return null;
+  const p=pmaOf(gaW,gaD,pn);const kg=wtG/1000;const preterm=gaW<37;let mgkg,grp;
+  if(!preterm){mgkg=3;grp='Nacido a término (0–8 meses)'}
+  else if(p.w<38){mgkg=1;grp='Prematuro · EPM < 38 sem'}
+  else if(p.w<=40){mgkg=1.5;grp='Prematuro · EPM 38–40 sem'}
+  else{mgkg=3;grp='Prematuro · EPM > 40 sem'}
+  const mg=r2(mgkg*kg);return{p,kg,mgkg,grp,mg,ml:r2(mg/6),preterm,extreme:gaW<28,age:pn||0}
+}
+function doseHTML(d){if(!d)return'<p class="hint">Ingrese EG al nacer y peso.</p>';
+  return `<div class="rec green" style="margin:0"><h4>${d.grp}</h4>
+  <dl class="kv"><dt>Edad posmenstrual</dt><dd class="mono">${d.p.w}+${d.p.d} sem</dd><dt>Peso</dt><dd class="mono">${d.kg.toFixed(2)} kg</dd><dt>Dosis</dt><dd class="mono">${d.mgkg} mg/kg/dosis</dd></dl>
+  <div style="margin-top:8px"><span class="big">${d.mg} mg</span> <span class="mono" style="color:var(--muted)">c/12 h × 5 días</span></div>
+  <div class="mono" style="font-size:15px;margin-top:2px">= ${d.ml} mL de suspensión 6 mg/mL</div>
+  ${d.extreme?'<p class="hint" style="color:var(--amber)"><b>EG al nacer &lt; 28 sem:</b> datos farmacocinéticos muy escasos; discutir con Infectología pediátrica.</p>':''}
+  ${d.preterm?'<p class="hint">Prematuro: depuración renal inmadura; la dosis de término daría concentraciones muy altas.</p>':''}
+  <p class="hint">Recalcular si el RN cruza un umbral de EPM durante el curso o si cambia mucho el peso. Prolongar más allá de 5 días solo si sigue grave o es inmunocomprometido.</p></div>`}
+function doseCalc(){$('#doseOut').innerHTML=doseHTML(neoDose(num('#dGaW'),num('#dGaD'),num('#dPn'),num('#dWt')))}
+['#dGaW','#dGaD','#dPn','#dWt'].forEach(s=>$(s).addEventListener('input',doseCalc));
+
+/* ---------- motor clínico ---------- */
+function rec(cls,title,body,tag){return `<div class="rec ${cls}"><h4>${title}${tag?` <span class="tag">${tag}</span>`:''}</h4>${body}</div>`}
+function evaluate(){
+  const o=[];const m=S.mStatus,t=S.mTiming,sev=S.mSev,F=S.mFlags,X=S.nSx;
+  const ill=(m==='sosp'||m==='conf');
+  const gaW=num('#gaW'),gaD=num('#gaD')||0,pn=num('#pn'),wt=num('#wt');
+  const onset=parseDate($('#mOnset').value),birth=parseDate($('#dBirth').value);
+  const nSym=X.size>0,nPos=S.nTest==='pos';
+  const preterm=gaW!=null&&gaW<37;const ucin=S.nLoc==='ucin';
+
+  if(!m&&!nSym&&!nPos){$('#out').innerHTML=rec('blue','Faltan datos','<p>Indique al menos el estado de la madre o los signos del recién nacido.</p>');return}
+
+  /* --- 0. Resumen --- */
+  let sum=[];if(ill)sum.push(m==='conf'?'Influenza materna confirmada':'Influenza materna sospechada');
+  if(m==='neg')sum.push('Influenza materna descartada');if(nSym)sum.push('RN sintomático');if(nPos)sum.push('RN con prueba positiva');
+  if(gaW!=null){const p=pmaOf(gaW,gaD,pn||0);sum.push(`EG ${gaW}+${gaD} · ${pn||0} d de vida · EPM ${p.w}+${p.d}`)}
+  o.push(`<div class="card dark" style="margin-bottom:10px"><span class="k" style="color:var(--peach)">Escenario</span>${sum.map(s=>`<span class="pill" style="background:rgba(244,180,138,.18);color:#f7ead8">${s}</span>`).join('')}</div>`);
+
+  /* --- 1. Madre --- */
+  if(ill){
+    let b='<ul>';
+    if(F.has('osel'))b+='<li>Continuar oseltamivir hasta completar 5 días.</li>';
+    else b+='<li><b>Iniciar oseltamivir 75 mg VO c/12 h × 5 días ahora</b>, sin esperar el resultado de la prueba y sin importar si está vacunada.</li>';
+    b+='<li>Aunque hayan pasado más de 48 h desde el inicio, tratar: en gestantes hospitalizadas el beneficio persiste.</li>';
+    b+='<li>Confirmar con NAAT/RT-PCR de hisopado nasofaríngeo; una prueba rápida negativa no descarta influenza.</li>';
+    if(sev==='mod'||sev==='grave')b+='<li>Hospitalizada o grave: considerar curso &gt; 5 días; CDC menciona 105 mg c/12 h como opción en el embarazo (sin datos de seguridad a esa dosis). Si hay neumonía, cubrir sobreinfección bacteriana (<i>S. aureus</i>, neumococo, <i>S. pyogenes</i>).</li>';
+    if(sev==='grave')b+='<li>Muestra de vía respiratoria baja si está intubada. Coordinar UCI, obstetricia y neonatología.</li>';
+    b+='<li>Fiebre: tratarla con paracetamol según criterio obstétrico.</li><li>Ajustar dosis si depuración de creatinina &lt; 60 mL/min. Baloxavir no se recomienda en embarazo ni lactancia.</li></ul>';
+    o.push(rec('red','Madre · tratamiento antiviral',b,'acción inmediata'));
+  } else if(m==='neg'){
+    o.push(rec('blue','Madre · influenza descartada','<p>Retirar precauciones de gotas por influenza según la política del hospital y buscar otra causa de la fiebre o los síntomas. Si la sospecha clínica sigue alta en plena temporada, repetir NAAT antes de suspender el antiviral.</p>'));
+  }
+
+  /* --- 2. Fiebre intraparto: diferencial pluralista --- */
+  if(t==='intra'||(F.has('febril')&&t!=='post'&&ill)){
+    let b='<p>La fiebre intraparto <b>no es sinónimo de influenza</b>, ni la influenza excluye una infección bacteriana. Mantenga abiertas estas hipótesis:</p><ul>';
+    b+=`<li><b>Triple I / corioamnionitis</b>${F.has('triplei')?' — <b>hay signos</b>':''}: taquicardia fetal, leucocitosis, líquido purulento. Antibióticos intraparto según obstetricia.</li>`;
+    b+='<li><b>Influenza</b>: tos, rinorrea, mialgias, contacto o brote, temporada activa.</li>';
+    b+='<li><b>COVID-19 y otros virus respiratorios</b>: NAAT múltiple si está disponible.</li>';
+    b+=`<li><b>Dengue</b>${F.has('dengue')?' — <b>epidemiología o hallazgos compatibles</b>: hemograma, plaquetas, NS1/IgM; riesgo de transmisión vertical si la fiebre es periparto':''}: en Panamá, siempre en el diferencial.</li>`;
+    b+='<li><b>Pielonefritis</b>: puño-percusión, examen de orina.</li><li><b>Fiebre asociada a epidural</b>: solo por exclusión.</li></ul>';
+    b+='<p><b>Para el RN:</b> evaluar el riesgo de sepsis bacteriana de inicio temprano con el protocolo de la sala (calculadora de sepsis de inicio temprano si ≥ 34 sem), con independencia del diagnóstico viral de la madre.</p>';
+    o.push(rec('amber','Fiebre intraparto · diferencial',b,'no cerrar antes de tiempo'));
+  }
+
+  /* --- 3. Ubicación del RN / contacto --- */
+  if(ill){
+    const reasons=[];
+    if(sev==='grave')reasons.push('madre grave o en UCI');
+    if(F.has('nocontrol'))reasons.push('la madre no puede usar mascarilla ni controlar la tos');
+    if(ucin)reasons.push('RN en UCIN');
+    const soft=[];
+    if(F.has('febril'))soft.push('fiebre en las últimas 24 h');
+    if(preterm&&!ucin)soft.push('RN prematuro');
+    let lowAb=false;
+    if(onset&&birth){const dd=(birth-onset)/864e5;if(dd<7&&S.mVax!=='si')lowAb=true}
+    if(lowAb)soft.push('parto < 7 días del inicio en madre no vacunada: poca IgG transferida');
+    if(sev==='mod')soft.push('madre hospitalizada por la influenza');
+
+    if(reasons.length){
+      let b=`<p><b>Separación temporal recomendada</b> (${reasons.join('; ')}).</p><ul>`;
+      if(ucin)b+='<li>La madre no entra a la UCIN mientras esté en precauciones de gotas (mínimo 5–7 días desde el inicio y ≥ 24 h sin fiebre).</li>';
+      b+='<li>Un cuidador sano y vacunado alimenta al RN.</li><li>Extraer leche desde el primer día para establecer la producción: higiene de manos, mascarilla, extractor limpio; la leche extraída la administra el cuidador sano. Es segura aunque la madre reciba oseltamivir.</li>';
+      b+='<li>Explicar a la madre el motivo y el plan de reencuentro; documentar la decisión.</li></ul>';
+      o.push(rec('red','RN · ubicación y contacto',b,'separar'));
+    } else {
+      let b='<p>Madre estable y capaz de usar mascarilla: <b>decisión compartida con la madre</b>. Las fuentes difieren:</p>';
+      b+='<div class="pov"><div><b>CDC 2026</b>Considerar separación temporal en la estancia; la decisión respeta los deseos de la madre.</div><div><b>Revisión Life 2026</b>Alojamiento conjunto, piel a piel y lactancia con precauciones son razonables en madre estable y RN a término.</div></div>';
+      if(soft.length)b+=`<p style="margin-top:8px"><b>Inclinan hacia separar:</b> ${soft.join('; ')}.</p>`;
+      b+='<p style="margin-top:8px"><b>Si se quedan juntos:</b></p><ul><li>Mascarilla médica bien ajustada en la madre y lavado de manos antes de cada toma o contacto cercano.</li><li>Cuna a ≥ 2 m de la cama cuando no está siendo atendido, con cortina o barrera física.</li><li>Idealmente, un adulto sano en la habitación que cuide al RN.</li><li>Cambiar la mascarilla si se humedece; no ponerle nada en la cara al RN.</li></ul>';
+      o.push(rec('amber','RN · ubicación y contacto',b,'decisión compartida'));
+    }
+    let r='<p>Reencuentro (o contacto sin restricciones adicionales) cuando:</p><ul><li>Afebril &gt; 24 h <b>sin antipiréticos</b>.</li><li>Controla la tos y las secreciones.</li><li>Clínicamente estable.</li></ul><p class="hint">Aun reunidos, mascarilla e higiene de manos siguen mientras dure el periodo de precauciones de gotas.</p>';
+    o.push(rec('blue','Criterios para reunir a madre e hijo',r));
+
+    /* aislamiento */
+    if(onset){const end=addDays(onset,7);
+      o.push(rec('blue','Precauciones de gotas · duración',`<p>Hasta <b>${fmtDate(end)}</b> (7 días desde el inicio, ${fmtDate(onset)}) <b>o</b> hasta 24 h después de que ceden la fiebre y los síntomas respiratorios, <b>lo que ocurra más tarde</b>.</p><p class="hint">El antiviral no acorta este periodo. El alta depende de la condición clínica, no del tiempo de excreción viral.</p>`))}
+  }
+
+  /* --- 4. Lactancia --- */
+  if(ill){
+    o.push(rec('green','Lactancia',`<ul><li>Mantener la leche materna: el virus rara vez pasa por la leche y la leche transfiere anticuerpos y factores antivirales.</li><li>${S.mVax==='si'?'Madre vacunada: su leche y su IgG ya protegen parcialmente al RN.':'Madre no vacunada o vacunada hace poco: la protección pasiva será menor; razón de más para la leche materna y para vigilar.'}</li><li>Oseltamivir es compatible con la lactancia.</li></ul>`))
+  }
+
+  /* --- 5. RN --- */
+  if(nSym||nPos){
+    const d=neoDose(gaW,gaD,pn,wt);
+    let b='<ul><li>Precauciones de gotas para el RN; examen médico inmediato.</li>';
+    b+='<li><b>Iniciar oseltamivir ya</b>; tomar NAAT/RT-PCR nasofaríngeo sin retrasar el tratamiento.</li>';
+    b+='<li>La influenza neonatal imita la sepsis: hemocultivo, hemograma, PCR/PCT, y antibióticos empíricos según el protocolo de sepsis hasta tener cultivos.</li>';
+    if(X.has('apnea')||X.has('o2')||X.has('perf')||X.has('let'))b+='<li><b>Signos de gravedad</b>: monitoreo continuo en UCIN, soporte respiratorio, vigilar sobreinfección bacteriana, miocarditis y convulsiones.</li>';
+    if(S.nTest==='neg'&&nSym)b+='<li>Prueba negativa con alta sospecha: repetir NAAT o considerar otros virus; no suspender el antiviral solo por un antígeno rápido negativo.</li>';
+    b+='</ul>';
+    if(d)b+=`<div style="margin-top:8px;padding:10px;background:#fff;border-radius:10px;border:1px solid #efb7ae"><div class="mono" style="font-size:12px;color:var(--muted)">${d.grp} · EPM ${d.p.w}+${d.p.d}</div><span class="big">${d.mg} mg</span> <span class="mono">c/12 h × 5 d</span><div class="mono" style="font-size:13px">${d.mgkg} mg/kg · ${d.ml} mL de 6 mg/mL</div>${d.extreme?'<div class="hint" style="color:var(--amber)">&lt; 28 sem al nacer: discutir con Infectología.</div>':''}</div>`;
+    else b+='<p class="hint">Ingrese EG, días de vida y peso para calcular la dosis.</p>';
+    o.push(rec('red','RN sintomático o positivo · tratar',b,'acción inmediata'));
+  } else if(ill){
+    let b='<ul><li><b>Sin quimioprofilaxis de rutina</b>: en menores de 3 meses no hay evidencia suficiente de eficacia (AAP 2026-27); CDC la reserva para situaciones juzgadas críticas.</li>';
+    b+='<li>No se recomienda tamizar con prueba al RN asintomático.</li>';
+    b+='<li>Vigilar cada turno: temperatura (fiebre <i>o</i> hipotermia), FR, apneas, saturación, succión, actividad.</li>';
+    b+='<li>Umbral bajo: ante cualquier signo, precauciones de gotas, NAAT y oseltamivir inmediato (pestaña Dosis).</li>';
+    if(preterm||ucin)b+='<li>Prematuro o en UCIN: mayor riesgo de enfermedad grave; la vigilancia debe ser más estrecha y la reacción más rápida.</li>';
+    b+='</ul>';
+    o.push(rec('amber','RN expuesto asintomático',b,'vigilar'));
+  }
+
+  /* --- 6. Unidad --- */
+  if(ill||nSym||nPos){
+    let b='<ul><li>Habitación individual con precauciones de gotas; mascarilla médica al entrar, higiene de manos, guantes y bata ante contacto con secreciones.</li>';
+    b+='<li>Procedimientos que generan aerosoles (intubación, aspiración abierta, CPAP/VNI, nebulización): respirador N95 y protección ocular.</li>';
+    b+='<li>Equipo dedicado (estetoscopio, termómetro); limpieza de superficies con desinfectante hospitalario.</li>';
+    b+='<li>Personal con fiebre o síntomas respiratorios fuera de la atención directa hasta ≥ 24 h sin fiebre sin antipiréticos.</li>';
+    b+='<li>Visitas: solo las necesarias, tamizadas por síntomas; las sintomáticas no entran al cunero ni a la UCIN.</li>';
+    b+='<li>Notificar el caso según las normas de vigilancia epidemiológica del MINSA.</li></ul>';
+    if(ucin||nPos)b+='<p><b>En UCIN</b>: buscar casos secundarios, agrupar (cohorte) y revisar al personal y a los padres del área. Si aparece un segundo caso, tratarlo como brote con Epidemiología e Infectología.</p>';
+    o.push(rec('blue','Sala y unidad · control de la diseminación',b));
+  }
+
+  /* --- 7. Egreso --- */
+  if(ill||nSym||nPos){
+    o.push(rec('green','Antes del egreso',`<ul><li>Vacunar a convivientes ≥ 6 meses y cuidadores no vacunados (estrategia capullo).</li>${S.mVax!=='si'?'<li>Ofrecer a la madre la vacuna posparto una vez recuperada; es compatible con la lactancia.</li>':''}<li>En casa: si es posible, que un adulto sano y vacunado cuide al RN hasta que la madre se recupere; aislar a cualquier enfermo del hogar.</li><li>Madre: mascarilla, lavado de manos y etiqueta de tos al tocar al bebé.</li><li>Consultar de inmediato si el RN tiene fiebre o temperatura baja, respira rápido o con esfuerzo, hace pausas, se pone morado, come poco o está muy dormido.</li></ul>`))
+  }
+  $('#out').innerHTML=o.join('');$('#out').scrollIntoView({behavior:'smooth',block:'start'});
+}
+$('#run').onclick=evaluate;
+
+/* ---------- prevención (checklists) ---------- */
+const PREV=[
+ {t:'Antes del embarazo y en el control prenatal',i:[
+  ['Vacuna de influenza en cualquier trimestre, apenas esté disponible la de la temporada','A'],
+  ['Idealmente ≥ 2–4 semanas antes del parto para que pasen anticuerpos al RN','B'],
+  ['Explicar a la gestante los síntomas de influenza y que consulte el mismo día','C'],
+  ['Circuito rápido: oseltamivir empírico, incluso tras consulta telefónica, si eso evita demora','C'],
+  ['Vacuna en el posparto si no se vacunó; compatible con lactancia','B']]},
+ {t:'Gestante hospitalizada antes del parto',i:[
+  ['Habitación individual con precauciones de gotas','C'],
+  ['Mascarilla médica en la paciente cuando sale de la habitación','C'],
+  ['Personal: mascarilla al entrar, higiene de manos, guantes y bata ante secreciones','C'],
+  ['Informar a la paciente y la familia sobre la transmisión y el uso de EPP','C']]},
+ {t:'Sala de partos y quirófano',i:[
+  ['Mantener precauciones de gotas durante el trabajo de parto y el parto','C'],
+  ['La influenza no cambia la vía del parto: decidir por indicación obstétrica','B'],
+  ['No omitir pinzamiento tardío del cordón, secado, calor ni estimulación por la influenza materna','B'],
+  ['Higiene de manos antes y después de manipular al RN','C'],
+  ['Reanimación con aspiración o ventilación: N95 y protección ocular','C']]},
+ {t:'Posparto: madre e hijo',i:[
+  ['Decidir separación o alojamiento conjunto con la madre y documentarlo','C'],
+  ['Si están juntos: cuna a ≥ 2 m, barrera física, adulto sano presente','C'],
+  ['Madre con mascarilla y lavado de manos antes de cada toma','C'],
+  ['Si están separados: extracción de leche desde el día 1; la administra un cuidador sano','B'],
+  ['Precauciones de gotas 7 días o hasta 24 h sin fiebre ni síntomas (lo más largo)','C']]},
+ {t:'Cunero y UCIN',i:[
+  ['Madres, cuidadores y familiares sintomáticos no entran al cunero ni a la UCIN','C'],
+  ['RN que desarrolla signos: precauciones de gotas, examen médico, NAAT y oseltamivir','C'],
+  ['Equipo dedicado y limpieza de superficies','C'],
+  ['Agrupar casos y expuestos (cohorte) si hay más de un caso','C'],
+  ['Notificar a Epidemiología; con un segundo caso, manejar como brote','C']]},
+ {t:'Personal de salud',i:[
+  ['Vacunación anual de todo el personal de partos, puerperio y neonatología','A'],
+  ['No atender pacientes con fiebre y síntomas respiratorios; volver tras ≥ 24 h sin fiebre sin antipiréticos','C'],
+  ['Higiene de manos en los 5 momentos','A'],
+  ['N95 en procedimientos que generan aerosoles','C']]},
+ {t:'Visitas',i:[
+  ['Limitar a las personas necesarias para el cuidado y el bienestar emocional','C'],
+  ['Tamizar síntomas respiratorios en la entrada; solo pasan asintomáticos','C'],
+  ['Enseñar higiene de manos, superficies que no deben tocar y uso de EPP','C'],
+  ['Limitar su movimiento dentro del hospital','C']]},
+ {t:'Egreso y hogar',i:[
+  ['Vacunar a convivientes ≥ 6 meses y cuidadores (capullo)','B'],
+  ['Adulto sano y vacunado cuida al RN hasta que la madre se recupere','C'],
+  ['Aislar a cualquier enfermo del hogar','C'],
+  ['Enseñar signos de alarma del RN y a quién llamar','C']]}
+];
+const pv=store.get('flu_prev',{});
+function renderPrev(){$('#prevList').innerHTML=PREV.map((s,si)=>{const done=s.i.filter((_,ii)=>pv[si+'-'+ii]).length;
+  return `<details class="acc"${si===0?' open':''}><summary><span class="n">${si+1}</span><span>${s.t}<br><small style="font-weight:400;color:var(--muted)">${done}/${s.i.length} cumplidas</small></span></summary><div class="body">${s.i.map((it,ii)=>{const id=si+'-'+ii;return `<label class="ck${pv[id]?' done':''}"><input type="checkbox" data-id="${id}"${pv[id]?' checked':''}><span>${it[0]} <span class="ev ${it[1]}">${it[1]==='A'?'ECA/meta':it[1]==='B'?'observ.':'consenso'}</span></span></label>`}).join('')}</div></details>`}).join('');
+  $$('#prevList input').forEach(c=>c.onchange=()=>{pv[c.dataset.id]=c.checked;store.set('flu_prev',pv);const open=$$('#prevList details').map(d=>d.open);renderPrev();$$('#prevList details').forEach((d,i)=>d.open=open[i])})}
+$('#prevReset').onclick=()=>{Object.keys(pv).forEach(k=>delete pv[k]);store.set('flu_prev',pv);renderPrev()};
+
+/* ---------- casos ---------- */
+const CASES=[
+ {t:'Fiebre intraparto en plena temporada',v:'Primigesta de 24 años, 39 sem, en trabajo de parto con 38,6 °C, tos seca y mialgias desde ayer. Su esposo tuvo "gripe" la semana pasada. No se vacunó. Taquicardia fetal 165 lpm, leucocitos 17 000. PCR de influenza A positiva. Parto vaginal; RN de 3 300 g, Apgar 8/9, asintomático.',
+  q:'¿Basta la influenza confirmada para explicar la fiebre? ¿Qué se hace con el RN y dónde se queda?',
+  a:'<p><b>No.</b> La taquicardia fetal y la leucocitosis mantienen abierta una Triple I concomitante: antibióticos intraparto según obstetricia y evaluación del riesgo de sepsis temprana del RN con el protocolo habitual, como si la influenza no existiera.</p><p>Madre: oseltamivir 75 mg c/12 h × 5 d ya. RN a término asintomático: sin profilaxis, sin prueba, vigilancia por turno. Ubicación: madre febril y no vacunada, parto dentro de los 7 días del inicio → poca protección pasiva; esto inclina hacia separación temporal, pero si ella está estable, usa mascarilla y prefiere alojamiento conjunto, se puede con cuna a 2 m, barrera y adulto sano presente. Lactancia materna en cualquier caso. Reunir cuando lleve &gt; 24 h afebril sin antipiréticos.</p>',
+  load:{mStatus:'conf',mTiming:'intra',mSev:'leve',mVax:'no',mFlags:['febril','triplei'],gaW:39,gaD:0,pn:0,wt:3300,nLoc:'aloj',nSx:[],nTest:'nd',onsetAgo:1,birthAgo:0}},
+ {t:'Puérpera con tos al segundo día',v:'Puérpera de cesárea, 2.º día, inicia fiebre 38,3 °C, tos y odinofagia. Vacunada en mayo (temporada local). RN de 38 sem, 3 050 g, lactancia exclusiva, sano. Prueba rápida de antígeno negativa.',
+  q:'¿Se suspende el antiviral por la prueba rápida negativa? ¿Qué cambia por estar vacunada?',
+  a:'<p>Una prueba rápida negativa no descarta influenza: iniciar oseltamivir empírico (puérpera ≤ 2 semanas = alto riesgo) y enviar NAAT. Vacunada meses antes del parto: el RN recibió IgG transplacentaria, protección parcial, no absoluta.</p><p>Madre estable y capaz de usar mascarilla → alojamiento conjunto con medidas es razonable si ella lo desea. Lactancia directa con mascarilla y lavado de manos. RN: sin profilaxis; vigilar. Egreso: vacunar a los convivientes no vacunados y enseñar signos de alarma.</p>',
+  load:{mStatus:'sosp',mTiming:'post',mSev:'leve',mVax:'si',mFlags:['febril'],gaW:38,gaD:0,pn:2,wt:3050,nLoc:'aloj',nSx:[],nTest:'nd',onsetAgo:0,birthAgo:2}},
+ {t:'Prematuro en UCIN con apneas',v:'RN de 32+0 sem, hoy con 10 días de vida, 1 640 g, en UCIN con alimentación por sonda. Su madre tuvo influenza confirmada hace 4 días y lo visitó con tos. Hoy: 3 apneas con bradicardia, hipotermia 35,9 °C y residuos gástricos.',
+  q:'¿Sepsis tardía o influenza? ¿Qué dosis de oseltamivir?',
+  a:'<p>Ambas, hasta demostrar lo contrario: hemocultivo, hemograma, PCR/PCT y antibióticos empíricos de sepsis tardía, <b>más</b> oseltamivir inmediato con NAAT nasofaríngeo.</p><p>EPM = 32+0 + 10 d = 33+3 sem → prematuro &lt; 38 sem: <b>1 mg/kg c/12 h</b> = 1,64 mg ≈ 0,27 mL de 6 mg/mL, por sonda, 5 días. La dosis de término (3 mg/kg) daría concentraciones excesivas por su función renal inmadura.</p><p>Unidad: precauciones de gotas, buscar contactos en la UCIN, revisar visitas; madre fuera de la UCIN hasta ≥ 24 h afebril y control de síntomas. Fallo del sistema: una visitante sintomática entró a la UCIN.</p>',
+  load:{mStatus:'conf',mTiming:'post',mSev:'leve',mVax:'no',mFlags:[],gaW:32,gaD:0,pn:10,wt:1640,nLoc:'ucin',nSx:['apnea','fiebre','ali'],nTest:'nd',onsetAgo:4,birthAgo:10}},
+ {t:'Madre en UCI, cesárea a las 35 semanas',v:'Gestante de 35 sem con neumonía por influenza A(H1N1), en ventilación mecánica; cesárea por deterioro materno. No vacunada; síntomas desde hace 5 días. RN de 2 400 g, asintomático, en cunero.',
+  q:'¿Se separa? ¿Profilaxis al RN? ¿Qué pasa con la leche?',
+  a:'<p>Separación obligada por gravedad materna. Madre: oseltamivir (considerar curso prolongado y la dosis de 105 mg c/12 h que CDC menciona), cobertura bacteriana de la neumonía.</p><p>RN: prematuro tardío, nació a los 5 días del inicio en madre no vacunada → casi sin anticuerpos maternos. Aun así, sin profilaxis de rutina; vigilancia estrecha y, ante cualquier signo, oseltamivir con EPM 35 sem → 1 mg/kg c/12 h. Leche: extracción en cuanto la madre esté estable, con apoyo de enfermería; leche donada si hay banco disponible mientras tanto.</p>',
+  load:{mStatus:'conf',mTiming:'pre',mSev:'grave',mVax:'no',mFlags:['febril','nocontrol'],gaW:35,gaD:0,pn:0,wt:2400,nLoc:'cunero',nSx:[],nTest:'nd',onsetAgo:5,birthAgo:0}}
+];
+function renderCases(){$('#caseList').innerHTML=CASES.map((c,i)=>`<div class="case" id="case${i}"><div class="hd"><div class="n">${i+1}</div><h3 style="margin:0">${c.t}</h3></div><p style="margin:4px 0;font-size:14.5px">${c.v}</p><div class="q">${c.q}</div><div style="display:flex;gap:8px"><button class="btn sm" data-a="${i}">Ver discusión</button><button class="btn ghost sm" data-l="${i}">Cargar en Evaluar</button></div><div class="ans">${c.a}</div></div>`).join('');
+  $$('[data-a]').forEach(b=>b.onclick=()=>{const c=$('#case'+b.dataset.a);c.classList.toggle('open');b.textContent=c.classList.contains('open')?'Ocultar':'Ver discusión'});
+  $$('[data-l]').forEach(b=>b.onclick=()=>loadCase(CASES[b.dataset.l].load))}
+function loadCase(L){resetForm();['mStatus','mTiming','mSev','mVax','nLoc','nTest'].forEach(k=>setSeg(k,L[k]));setMulti('mFlags',L.mFlags);setMulti('nSx',L.nSx);
+  $('#gaW').value=L.gaW;$('#gaD').value=L.gaD;$('#pn').value=L.pn;$('#wt').value=L.wt;
+  $('#mOnset').value=iso(addDays(today,-L.onsetAgo));$('#dBirth').value=iso(addDays(today,-L.birthAgo));goTab('v-eval');setTimeout(evaluate,250)}
+
+/* ---------- fuentes ---------- */
+const SRC=[
+ ['CDC. Guidance for the Prevention and Control of Influenza in the Peri- and Postpartum Settings','Actualizada 28-sep-2026','https://www.cdc.gov/flu/hcp/infection-control/peri-post-settings.html'],
+ ['CDC. Recommendations for Obstetric Health Care Providers Related to Use of Antiviral Medications','Actualizada 19-dic-2025','https://www.cdc.gov/flu/hcp/antivirals/treatment_obstetric.html'],
+ ['CDC. Influenza Antiviral Medications: Summary for Clinicians (Tabla 2, dosis por EPM)','Actualizada mar-2026','https://www.cdc.gov/flu/hcp/antivirals/summary-clinicians.html'],
+ ['AAP Committee on Infectious Diseases. Recommendations for Prevention and Control of Influenza in Children, 2026–2027','Pediatrics 2026; doi:10.1542/peds.2026-078778','https://www.drugtopics.com/view/aap-releases-2026-2027-childhood-flu-recommendations'],
+ ['AAP. Recommendations … 2025–2026: Policy Statement','Pediatrics 2025;156(6):e2025073620',''],
+ ['ACOG. Influenza in Pregnancy: Prevention and Treatment (Committee Statement No. 7 y Practice Advisory ago-2025)','Obstet Gynecol 2024;143:e24-e30','https://www.acog.org/clinical/clinical-guidance/practice-advisory/articles/2025/08/influenza-in-pregnancy-prevention-and-treatment'],
+ ['Kadaj A, Trif P, Galis R, et al. Management of Newborns Exposed to Maternal Influenza: A Scoping Review','Life 2026;16:1171 (15-jul-2026)','https://doi.org/10.3390/life16071171'],
+ ['Sahni LC, et al. Maternal Vaccine Effectiveness Against Influenza-Associated Hospitalizations and ED Visits in Infants','JAMA Pediatr 2024;178:176-184',''],
+ ['Cantey JB, et al. Prevention of mother-to-infant transmission of influenza during the postpartum period','Am J Perinatol 2013;30:233-240',''],
+ ['MINSA Panamá. Campaña de vacunación contra influenza 2026 (prioriza embarazadas y < 5 años)','abr-2026','https://www.laestrella.com.pa/panama/nacional/panama-recibe-primer-lote-de-vacunas-contra-la-influenza-y-activa-jornada-nacional-de-inmunizacion-EG21271335']
+];
+$('#srcList').innerHTML+=SRC.map(s=>`<div class="src"><b>${s[0]}</b><small>${s[1]}</small>${s[2]?`<br><a href="${s[2]}" target="_blank" rel="noopener">abrir</a>`:''}</div>`).join('')+'<p class="hint" style="margin-top:10px">Nota de contexto: en 2026 la AAP emite recomendaciones independientes del calendario federal de EE. UU.; para Panamá rigen las normas del MINSA y el PAI.</p>';
+
+/* ---------- PWA: manifiesto + service worker ---------- */
+(function(){
+  const base=location.href.split('#')[0].split('?')[0];
+  const man={name:'Influenza Perinatal · CDSS',short_name:'Influenza',start_url:base,scope:base.replace(/[^/]*$/,''),display:'standalone',background_color:'#1d1638',theme_color:'#1d1638',lang:'es',
+    icons:[{src:'data:image/jpeg;base64,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',sizes:'512x512',type:'image/jpeg',purpose:'any maskable'},{src:'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwQDAwQEBAQFBQQFBwsHBwYGBw4KCggLEA4RERAOEA8SFBoWEhMYEw8QFh8XGBsbHR0dERYgIh8cIhocHRz/2wBDAQUFBQcGBw0HBw0cEhASHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBz/wAARCAC0ALQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD4pRalVaRRU6LXrJDBUqRUp6JUypWiQ0iAR0eXVoR0GOnYdimUqNkq6yVE6UmhNFJlqFlq461AwrNok/ZT4Jf8kY+HX/Yu6d/6TR13dcL8E/8AkjPw6/7F7Tv/AEmjruq8qW7AKKKKQBRRRQAUUUUAFFFFABRRRQAUUUUAfhmgqwgqGMVesrWW9uIbaCNpJ5nEcaL1ZicAD8a9haFJX2Jfss0cMczxOsUuQjlSFbHXB74rX1fQv7HTTmN3BcfbbVLnERJ8sNn5W9xiuutLXU9H8N3sHirS7iTTdNdBZW1wrR5ndj91xjKYDFgCe2MdaZ4f1y08Raxp9lqGkWCyHbBZywqyCN+fLDDd86biMjr79jl7aWskrpdjuWHirRbs3bfp/XT9DiJrSW2kMU8TxSrjKOpUjv0NMMddV4h03xLcNJrOu2l4rSuIjNcRbMsBwMYHGB6YrnmTArqg+aN/yMZ0+V2/MoslQOtXnWqzihoyaKTrVdxVx0JOAKk/se6KhnQQqehmYR5+m4jP4VlJpbkWb2P2B+Cn/JGvh3/2L2nf+k0dd1XA/BqQxfB/4fRiN32aBp65XGDi2j6HPSu3+0OOsEn4Ff8AGvHk1dhysnoqD7Uo+8kq/wDACf5VJHMkoyjq30NK6E00PooopiCiiigAoopAwJIBGR1HpQAtFFFABRRRQB+GsdW4HaN1dGKupyGBwQfWqaGrMZr2UUj0PR4rex8O3N7r9001lrjBUjt3D3CyRsf3rZPGMkYPXf261d0u10DwrqNheyancXVxKgltWW12JAWyFkfLZO0jO0enWvOEbpW1qniC81pbFbto2FlAtvFsjC4QdAcdazdGTdr6Pf8AQ7YV4pJ21W36mhrNheaDeS6Vc3KSiJhJiGXfGSQPmHvg+may3YVXWSp4ImuH2rgADLMxwFHqa6o6R1MnJN6EQjeZwkaszscBVGSTUrWsFr/x8sZJP+eURHH1bp+Az+FbvhvQ7nxPq0Wi6S9vDLMrl7m6k8tdqqWYk9lAB4HPr7QG+0u18O3mltpMU2sPdbhqnnkhIlwNiIODk5+buD7DGE6uvKv68w5dLsfFoWqw6rpdhfLH4di1FQ8VzeRtCojORvLkbscf/qHNV7ey8L2OoeILfWb2/vxCkiafc6cFCTyg4Vn38hOh4pjDX/F9zEgGpatcQRLFGoDztGg6KAMkCs7UtGv9ImEOo2NzZzHny7iJo2/IgVztN6Sf3f1cTklsvvP1f+DVtdf8Kw+Hk4vSLNfDmnr9m8sct9nj+bd1/Cu0gsbqEX27UJJDcEmIsg/cZzjHrjjr6Vy/wbOPhD8Px/1ALD/0njrts15kormbI53a36Iy3i1i20mOOC4trrUUPzS3CFFcZ9F6HGBUlzd7L+0tZLGaTz1ObiNcpGQOhPUVoZpc1PL2Y+e+67+W/wDkVoZ0d5UtrmOVoW2yRl9xQ+hPUH61ZjnDnawKSf3W6/h61RfTYoxey2Sx215dLhp1QE7sHDEd8ZqsL9dOh0yz1a4El9dHy1kjjIVnHuOnX2pqTW4cil8P/B21+RuUVAkjRkJIcg8K/r7H3qerTMWrGdqt5Fbx4+1rDNH+9CZGXA7YPY9KgmS7sxc3rNbqZEUSBUOUAzznPzYyewzjtV3UIXmhKRwo5l/dsWONqnqffHpVKRLu6kuLNp43SJVY5iIMmc8E5x25wO/aolub02rfn6aF+ymikgCR3K3JiAVnDAknHfFWait9xiRpIlilYAuqnOD9e9S1a2MJbhRRRTEfhihqdGqojVMjYr10xl1GqdXqir1Kr1omUmaNuj3EqRxjLMcDtXS6R4f1HxEmoQaPCJbfTbd7y6lLhAUTqxJI/Adf1rn42+x2Y/573I/75j/+uR+Q963Nal0W0ttLTw/dXzSy2KjUml+RWmJyyADqowPUHArKpN7RNoW3Yuua1Zara6RBZ6NbacbG2EM0kTFmupM5MjE9z6dvXGAOi+Dvw5k+KPj3TtAEjw2jBp7uZBkxwpyxHuThR6FhXAqeK+jv2MNTtbL4p31tOyrPfaXLFAT1ZhJG5Uf8BRj/AMBrGtL2dJ8gubmep9u+F/CmjeDNHg0nQtPgsbGEACOJcFjj7zHqzHuTkmjxR4T0Xxpo8+k67p8F9YTAgxyrkqf7ynqrDsRgitmivn+Z3vfU1H+EtIg8OeF9F0S1d3t9Ks4bKNpPvMsSBATjuQorZzVOxBEJz0J4q1mumMm1dmDWo/NKDUeaUGquKxIDS8HHtTAacDVCMkTHRlupNX1KN7W4uNsHmIF2BuiEjr/9ataJzG/lOc8ZVj3Hp9aZcWsF5EYriGOWIkEpIoYZByODVSykvrs3qXlstv5UxFvIr7t6dm9j60loy3aav/l+C/M1aKjgk82MEjDDhh6HvUlaGD0CiiigAooooA/ChWqZWqmr4qVXr00wLatirunxfa7uKIttVm+Zv7q9z+AzWWHrV01vKtbu46EKIVPu/X/x0N+dU5WRUdzuvCV3rmgPN48sNMtZ7GwmNoGugGjjd4yqgLkElVI6dOK5JXLEk9Sc+la+t2cOjaNosFl4hF/FqNut7dWULHy7WbJAVgCQXC+oBH0IrEjbpWMGnef9WX9M1m2rR/q7LaGtTRNZvvD2q2eq6ZcvbX9nKssMydUYdPr9DwayEPSvX/gL8Grv4t+Jgkwkh8O2DK99cjgkdokP95sfgMn0BmpUUYty2EkfYPwL+Os/xasmiuPDl9bX1ooFzeQqDZFvZmYEMeuzDEDua9P8V+KdL8F+H77XNYuBBYWab3bqWPQKo7sTgAepqfQPD+meF9JttJ0eyhstPtl2xwwrgD39yepJ5J5NfDP7U/xTk8ZeM38O2FyW0LQ3MZCN8s1yOHc+u3lB9GI6148YKpP3VZGt7I+9/CmtxeJPC2ia1BE8UOp2UF4kbnLIskauAfcZrYzXF/CQ4+FPgX/sB2P/AKTpXXlwKtuxFiXNOBquJxUiyBqFJA4koNPBqMGnA1aIJQazNXth5lpfvqElpBYM0soBwki45DVoikmhjuYZIZkWSKRSrowyGB6g07XQRlyu4yCZGljlidXhuUDqynIJwMEfUfyq5WBpV9Dd6fJ9ns5bSPTpzAsbrt4TAJX22k1vDpVRd0KrFxdmLRRRVGYUUUUAcH/wpD4Yf9E48H/+CS2/+Ipf+FI/DEf8058H/wDgktv/AIiu7op3YHCf8KS+GX/ROvCH/gktv/iKjHwZ+G4maIfD7wmIwobb/Y1tjOTzjZ14rv6pTqr/AGtZHKIYwC4OCowec/nUykyonCaX8FPAcNlGuoeA/B0t2CdzxaLbBTycY/djtirf/Cm/hwOnw/8ACn/gnt//AIiuq0eOCHS7WO2nNxAqAJKTksPWrhqIt8q1NJ/G/X0/A4c/B74dDp4B8K/+Ce3/APiK3tG8NaJ4btDZ6Lo+n6baM5kMFlbJChYgAttUAZwBz7VrGmmk23uCIjFH/cX8q4+T4UeAZZGkfwP4ZZ3JZmbSoCST3J2V2RphqNtikVra2t9OtILS0git7W3jWKKGFAiRoowqqo4AAAAA6Vja5rqaXGABvmf7qZ/U1ty/drzfxOzNrEwboqqB9Mf45rhxlaVOF4nfgaMatS0thW8U6mX3CZVH90IMV0WgeJ/t8ot7hQk5+6y9G/8Ar1wlWLFmS9tmT74kUj868uliakZJt3PXrYSlODSVj2GJ9wFSiqtuelWhX0UXdHzElqPFPFMWnitEQyhAdRkvtSjuY4RYbUFqyH52yvz7vx6VftW320Lf3kU/pWJa2+pr4svZpGkOkvaoIwZAVEmecL2OO/8AkbNh/wAekPpt4+lOJVVJW26ben59yxRRRVmIUUUUAFFFFABVZkV7iRWAKvGAQehGT/jVmq83ySxP2zsP4/8A1wPzpMqO5R0K7trzTY3tLd7e3QtGsTLtK4OOlXzVS0kvmvL5LqGNLZGX7O6Hl1xznnsfpVw1nHY0qfE2v8yI0008im0MSIzTCKlNNIqGWmQOuRXLeI9Ae/2z24H2hBgqeNw/xrrsUxog1Y1qKqx5ZG9GtKlLmieRvp13HJ5bWswf02Guk8O+GpluUurtNgQ5SM9SfU12v2epUhC1yUsvjGXM3c7KuZSnHlSsLCm0VMKQDFOAr0krHlN3HCnimikmmjtoJJpXCRRKXdj0AAyTVoncoW1tdQ6pqV5JfmWzkRFitscQlR8359a0rRdlrAvoij9KwdGt9OGnT3elvI8WsTm4LuTkl/vYB6AAGujAwMVUSq29v0ttoLRRRVGIUUUUAFFFFABUc8ZliZRw2OD6HtUlFAJ2Ma9RVuLXVZL97a1tkfzYicI+ePm9wa0lZXUMpDKwyCDkEVDc2sUyy21xGsltcggq3TPcfj1qtp9zIbu7sTYSW9vaBFhlP3JFI7fTGKy2fqbv3o+npt/w7LxFMIqUimkU2iEREUmKeRSYqbFXGYoxTsUYFKwXG4pwFLilxTsFxAKeBSAU8CqSJFArO1i7urZbSO1083guJ1hmBYBY4zncx9QPSrV7e2+m2kt1dzJDbxDLyOeAKo2UE0F3f6k+oSXVtdiM21uBhIwB/D6lievFBcFb3n+uv9bl+ONBPHHGqpFbrgKowATwAPoM/mKuVFbxGKPDHLsdzH1NS1aMpO7CiiimSFFFFABRRRQAUVE1wgMeDuEjbQV5GcH/AANSKytnaQcHBwehoHZiSRiRCrdD6dqy9TsptSs3tEvJrO4BVlmh68HOfp6itamSRCQDkhhyGHUGpkroqE3Fpoz7fVrW41K505Hb7XbKrSKykcEcEHoetXSKrXKPNDNAJfs11IhRJ0UHB7EZ9OuP/wBdUjqD6MmlWd8Z7u5uW8k3MUPy7/Vsfdz/AENTe25pyKXwfd8tWahFJipOD+FJinYzuR4oxUmKTbSsO4zFOAp2KMUWC4gFJJIkKF5HVEHVmOAKrnU7MagNO+0R/bjH5vk5+bb61kJYSeINHVfFOnwRMtx5iQRylgAD8uSDyeTx0Pp2AXGHWWi/H5LqWzHdahe6ja6np9qdFVU8ppGDmY9SSvQAHHX079tOFDK6ysMIv+rU9vf/AD2+tCo05DSLtjHKoep9z/h/kWapIic76L+v+H6jXdY0Z3YKijJZjgAVT1LU10+2inEMk6yyJGBFg/eOAfpz+tR6vfabAiWeoyKEvAyhGBIcAc9OnWsnTdOGsWSuLy4j06OQrawxMBtVGwpJxk8rwOwx1NTKTvZGlOkrKc9vz9DpWljR0jZ1DvnapPLY64Hen1yjT2em6rK+s3Pmz2SCS2ndeRG2QeFGN2VOT346V1EMyXEMcsbbo5FDKfUEZFVGVyKlJws+nfp8h9FFFUZBTZC4jYxqrPjgMcAn606igDIVbbzbgXLrC8bZVFlICAgcr05OT2/+va03zPs8ZaNAjKG3hvmcnuRjqfrUv2ONRCIxsWJy4AGck5z/ADqWOFId+xQu9izY7k9TUpO5rKaasPoooqjIa6LIpVgCp7GoNksP3P3if3WPzD6Hv+P51ZopWGnYxLfTrG21C8vYd0F9eACQyE4JA4IUnHp0qJRrum6GSfJ1XVFbgDEIdc/lnFb7KrAhgCD2NQfYo1/1ZaL2Q4H5dKnl7GyrX+LXbfy6X3sULvUrm0l06MabcTG6bbK0RBW36csfTk/kafHqbyavNp/2G7VI4xILpkHkv0+UNnrz09jVv7PKOlzJ/wACVT/SjyJz1uMf7qCizFzRtt+ZlwX+q31jfsmmCzu4mZLZbqQMsuOjHbyBUd1p93fadYDUNSaxu4nWSZrF9iyEfw5bnHStj7Kx+9cTN+IH8gKfHaxRHcqAN/ePJ/PrRy9x+1Sd4q39eZUWKF7prq3s4/tLqEa4ZApK+mcZI9ulWo7cKwkkYySDoT0H0Hap6Kqxk5NhRRRTJILyc21rLOsLzPEpYRxjLN7D3rnlk1HSbZbmMW4hvJlYWs5KmBpGHGec8tkjHXOK6iq95YW2oRpHdQrKiOHUN2YdDUSi3qjalUUdJLTqZNol3Yapi5iN0+ocvcRJhIQo4Qg/w8nB6kk1vUUVUVYic+d3aCiiimQFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf/9k=',sizes:'180x180',type:'image/jpeg'}]};
+  const l=document.createElement('link');l.rel='manifest';l.href=URL.createObjectURL(new Blob([JSON.stringify(man)],{type:'application/manifest+json'}));document.head.appendChild(l);
+  if('serviceWorker' in navigator&&location.protocol.startsWith('http')){navigator.serviceWorker.register('sw.js').then(()=>navigator.serviceWorker.ready).then(()=>setTimeout(net,600)).catch(()=>{})}
+})();
+
+/* ---------- inicio ---------- */
+resetForm();renderPrev();renderCases();doseCalc();net();
+if(store.get('flu_seen',0)&&location.hash==='#app')$('#cover').classList.add('hide');
+</script>
+</body>
+</html>
